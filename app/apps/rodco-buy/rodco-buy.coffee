@@ -8,8 +8,12 @@ class RodcoBuy extends RSpine.Controller
   className: "app-canvas"
   
   elements:
+    '.category-dropdown-label': 'categoryDropdown'
     '.product-list': 'productList'
-    '.categorias-list': 'categorisList'
+    '.categorias-list': 'categoriesList'
+
+  events:
+    'click .category-item': 'changeCategory'
 
   constructor: ->
     super
@@ -18,7 +22,7 @@ class RodcoBuy extends RSpine.Controller
     Product.query {}
   
   render: ->
-    @html require("app/rodco-buy/layout")() 
+    @html require("app/rodco-buy/layout")(@activeCategory) 
 
   bind: ->
     Product.bind 'refresh update create', @renderProducts
@@ -30,10 +34,16 @@ class RodcoBuy extends RSpine.Controller
 
   # Products methods.
   renderProducts: =>
-    @productList.html require('app/rodco-buy/product_item_layout') Product.all()
+    @productList.html require('app/rodco-buy/product_item_layout') Product.filter(@activeCategory)
+    @renderCategories()
 
-  renderCategorias: =>
-    categorias= (Product.Categoria__c for Product in Product ).unique()
-    @categorisList.html require('app/rodco-buy/categoriaItem') Product.all()
+  # Category methods.
+  renderCategories: =>
+    @categoriesList.html require('app/rodco-buy/categoriaItem') Product.getCategories()
+
+  changeCategory: (e) =>
+    @activeCategory = $(e.target).parent().data 'category'
+    @categoryDropdown.html $(e.target).text()
+    @renderProducts()
 
 module.exports = RodcoBuy

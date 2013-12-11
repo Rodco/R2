@@ -7,23 +7,37 @@ class producto extends RSpine.Model
   @extend RSpine.Model.SalesforceAjax.Auto
   @extend RSpine.Model.SalesforceModel
 
-  # Filters.
-  @filters:
-    '' : 'Activo__c = true'
-
-  porcentage: ->
-      return 90
-  
-
-  unique = ->
-    output = {}
-    output[@[key]] = @[key] for key in [0...@length]
-    value for key, value of output
-    
   constructor: -> 
     super 
 
 
+  # Filters.
+  @filters:
+    '' : 'Activo__c = true'
 
+
+  # Filter products by category.
+  @filter = (query) ->
+
+    # If there is no query specified, then return
+    # product list.
+    return @all() unless query
+
+    # Filter product by category.
+    @select (item) ->
+      item['Categoria__c'] is query
+
+
+  # Get all categories.
+  @getCategories = ->
+    categories = [{
+      name: 'TODOS'
+      value: ''  
+    }]
+
+    for c in (p['Categoria__c'] for p in @all()).unique()
+      categories.push { name: c, value: c } if typeof c is 'string'
+
+    categories
 
 module.exports = producto

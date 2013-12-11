@@ -1,5 +1,6 @@
 RSpine = require("rspine")     
 require("lib/initSetup")
+require("lib/utils")
   
 Session = require("models/session")
 User = require("models/user")

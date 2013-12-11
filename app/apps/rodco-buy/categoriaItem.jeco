@@ -1,1 +1,1 @@
-<li><a href="#"><p> <%= @Categoria__c %> </p></a></li>
+<li class="category-item" data-category="<%= @value %>"><a href="#"><%= @name %></a></li>
