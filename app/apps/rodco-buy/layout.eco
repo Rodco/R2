@@ -40,15 +40,7 @@
               <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
                 TODOS <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Candados</a></li>
-                <li><a href="#">Metales</a></li>
-                <li><a href="#">Remate</a></li>
-                <li><a href="#">Cerraduras</a></li>
-                <li><a href="#">Ferretería</a></li>
-                <li><a href="#">Eléctrico</a></li>
-                <li><a href="#">Coflex</a></li>
-                <li><a href="#">Plywood</a></li>
+              <ul class="dropdown-menu categorias-list" role="menu">                
               </ul>
             </div>
           </div>        
