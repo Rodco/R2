@@ -1,0 +1,10 @@
+<div class="row" data-product="<%= @Name %>">
+  <div class="col-md-3">
+    <input type="text" class="col-md-3 form-control input-lg text-center product-count" value="<%= @count %>">
+  </div>
+  <a href="" class="btn btn-default col-md-9">
+    <h3 class="col-md-2"><span class="glyphicon glyphicon-remove-circle text-danger">X</span></h3>
+    <h4 class="col-md-10 text-left"><%= @Name %></h4> 
+  </a>
+</div>
+<br />

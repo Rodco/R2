@@ -79,15 +79,7 @@
       <label for="" class="col-md-9">Productos</label>
     </div>
 
-    <div class="row">
-      <div class="col-md-3">
-        <input type="text" class="col-md-3 form-control input-lg text-center" value="4">
-      </div>
-      <a href="" class="btn btn-default col-md-9">
-        <h3 class="col-md-2"><span class="glyphicon glyphicon-remove-circle text-danger"></span></h3>
-        <h4 class="col-md-10 text-left">CANDADOS YALE 11840 VISUAL BLISTER</h4> 
-      </a>
-    </div>
+    <div class="shopping-cart"></div>
   </section>
 
 </div>
