@@ -16,11 +16,13 @@ class RodcoBuy extends RSpine.Controller
     '.subcategories-ddwn': 'subCategoriesContainer'
     '.categories-ddwn': 'categoriesContainer'
     '.shopping-cart': 'shoppingCartContainer'
+    '.cart-count': 'shoppingCartCount'
 
   events:
     'click .categorias-list .category-item': 'changeCategory'
     'click .subcategories-list .category-item': 'changeSubCategory'
     'click .product-item': 'addProduct'
+    'click .remove-cart-item': 'removeProduct'
     'keyup .product-count': 'increaseProductCount'
     'keyup .product-search': 'searchProduct'
 
@@ -31,7 +33,7 @@ class RodcoBuy extends RSpine.Controller
     Product.query {}
   
   render: ->
-    @html require("app/rodco-buy/layout")()
+    @html require('app/rodco-buy/layout')()
     @productsFilter = Object.create null
     @shoppingCart = []
 
@@ -48,13 +50,21 @@ class RodcoBuy extends RSpine.Controller
 
   # Render products list.
   renderProducts: =>
-    @productList.html require('app/rodco-buy/product_item_layout') Product.filter(@productsFilter)
+    @productList.html require('app/rodco-buy/product-list/product-item') Product.filter(@productsFilter)
     @renderCategories() if not @subCategory
+
 
   # Search a product.
   searchProduct: (e) =>
     @productsFilter.name = $(e.target).val()
     @renderProducts()
+
+
+  # Render shopping cart.
+  renderShoppingCart: ->
+    @shoppingCartContainer.html require('app/rodco-buy/product-list/cart-item') @shoppingCart
+    @shoppingCartCount.html @shoppingCart.length
+
 
   # Add a product to cart.
   addProduct: (e) =>
@@ -71,9 +81,16 @@ class RodcoBuy extends RSpine.Controller
     @shoppingCart.push Name: name, count: 1 if not exists
     @renderShoppingCart()
 
-  # Render shopping cart.
-  renderShoppingCart: ->
-    @shoppingCartContainer.html require('app/rodco-buy/cart-item') @shoppingCart
+  # Remove a product from cart.
+  removeProduct: (e) =>
+    e.preventDefault()
+    name = $(e.currentTarget).parent().parent().data 'product'
+
+    for i,p of @shoppingCart
+      @shoppingCart.splice(i, 1) if p.Name is name
+
+    @renderShoppingCart()
+
 
   # Increase the ammount of a product.
   increaseProductCount: (e) ->
@@ -90,7 +107,7 @@ class RodcoBuy extends RSpine.Controller
   renderCategories: =>
     @subCategoriesContainer.css display: 'none'
     @categoriesContainer.css display: 'block'
-    @categoriesList.html require('app/rodco-buy/categoriaItem') Product.getCategories()
+    @categoriesList.html require('app/rodco-buy/product-list/category-item') Product.getCategories()
     @categoryDropdown.html 'TODOS'
     @subCategory = false
 
@@ -113,7 +130,7 @@ class RodcoBuy extends RSpine.Controller
   renderSubCategory: (category) ->
     @subCategoriesContainer.css display: 'block'
     @categoriesContainer.css display: 'none'
-    @subCategoriesList.html require('app/rodco-buy/categoriaItem') Product.getSubCategories category
+    @subCategoriesList.html require('app/rodco-buy/product-list/category-item') Product.getSubCategories category
     @subCategoryDropdown.html category
     @subCategory = true
 
