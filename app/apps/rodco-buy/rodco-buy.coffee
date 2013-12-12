@@ -24,7 +24,7 @@ class RodcoBuy extends RSpine.Controller
     'click .subcategories-list .category-item': 'changeSubCategory'
     'click .product-item': 'addProduct'
     'click .remove-cart-item': 'removeProduct'
-    'keyup .product-count': 'increaseProductCount'
+    'change .product-count': 'increaseProductCount'
     'keyup .product-search': 'searchProduct'
 
   constructor: ->
@@ -104,7 +104,7 @@ class RodcoBuy extends RSpine.Controller
   increaseProductCount: (e) ->
     count = parseInt $(e.currentTarget).val()
     count = if count >= 0 then count else 0
-    
+
     $(e.currentTarget).val count
     name = $(e.currentTarget).parent().parent().data 'product'
 
