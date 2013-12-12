@@ -16,6 +16,7 @@ class RodcoBuy extends RSpine.Controller
     '.subcategories-ddwn': 'subCategoriesContainer'
     '.categories-ddwn': 'categoriesContainer'
     '.shopping-cart': 'shoppingCartContainer'
+    '.cart-total-container': 'cartTotalContainer'
     '.cart-count': 'shoppingCartCount'
 
   events:
@@ -66,10 +67,14 @@ class RodcoBuy extends RSpine.Controller
     @shoppingCartCount.html @shoppingCart.length
 
 
+  # Cart methods.
+  # -------------
+
   # Add a product to cart.
   addProduct: (e) =>
     e.preventDefault()
     name = $(e.currentTarget).data 'product'
+    price = $(e.currentTarget).data 'price'
     exists = false
 
     for p in @shoppingCart
@@ -78,8 +83,10 @@ class RodcoBuy extends RSpine.Controller
         exists = true
         break
 
-    @shoppingCart.push Name: name, count: 1 if not exists
+    @shoppingCart.push Name: name, price: price, count: 1 if not exists
+    @calculateTotal()
     @renderShoppingCart()
+
 
   # Remove a product from cart.
   removeProduct: (e) =>
@@ -89,16 +96,34 @@ class RodcoBuy extends RSpine.Controller
     for i,p of @shoppingCart
       @shoppingCart.splice(i, 1) if p.Name is name
 
+    @calculateTotal()
     @renderShoppingCart()
 
 
   # Increase the ammount of a product.
   increaseProductCount: (e) ->
-    count = $(e.currentTarget).val()
+    count = parseInt $(e.currentTarget).val()
+    count = if count >= 0 then count else 0
+    
+    $(e.currentTarget).val count
     name = $(e.currentTarget).parent().parent().data 'product'
 
     for p in @shoppingCart
-      p.count = parseInt(count) if p.Name is name
+      p.count = count if p.Name is name
+
+    @calculateTotal()
+
+
+  # Calculate total.
+  calculateTotal: ->
+    total = 0
+
+    for p in @shoppingCart
+      total = total + (p.price * p.count)
+
+    @cartTotal = total.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+    @cartTotalContainer.html @cartTotal
+
 
   # Category methods.
   # -----------------
