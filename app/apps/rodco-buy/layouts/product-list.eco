@@ -71,7 +71,7 @@
     <div class="row">
       <label for="" class="col-md-12">TOTAL</label>
       <h4 class="col-md-7">&cent;<span class="cart-total-container">0.00</span></h4>
-      <a href="su-orden.php" class="btn btn-success btn-lg col-md-5">Confirmar <span class="glyphicon glyphicon-ok"></span></a>
+      <a href="#" class="btn btn-success btn-lg col-md-5 confirm-cart">Confirmar <span class="glyphicon glyphicon-ok"></span></a>
     </div>
 
     <div class="row">

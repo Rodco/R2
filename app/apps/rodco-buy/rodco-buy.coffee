@@ -18,12 +18,16 @@ class RodcoBuy extends RSpine.Controller
     '.shopping-cart': 'shoppingCartContainer'
     '.cart-total-container': 'cartTotalContainer'
     '.cart-count': 'shoppingCartCount'
+    '.order-list': 'orderList'
 
   events:
     'click .categorias-list .category-item': 'changeCategory'
     'click .subcategories-list .category-item': 'changeSubCategory'
     'click .product-item': 'addProduct'
     'click .remove-cart-item': 'removeProduct'
+    'click .confirm-cart': 'renderOrder'
+    'click .back-to-cart': 'backToCart'
+    'click .confirm-buy': 'confirmCart'
     'change .product-count': 'increaseProductCount'
     'keyup .product-search': 'searchProduct'
 
@@ -34,9 +38,26 @@ class RodcoBuy extends RSpine.Controller
     Product.query {}
   
   render: ->
-    @html require('app/rodco-buy/layout')()
+    @html require('app/rodco-buy/layouts/product-list')()
     @productsFilter = Object.create null
     @shoppingCart = []
+
+  renderOrder: ->
+    @html require('app/rodco-buy/layouts/order-page')()
+    @orderList.html require('app/rodco-buy/product-list/order-item') @shoppingCart
+    @calculateTotal()
+
+  confirmCart: (e) ->
+    e.preventDefault()
+    console.log 'I sould confirm the cart.'
+
+  backToCart: ->
+    @html require('app/rodco-buy/layouts/product-list')()
+    @productsFilter = Object.create null
+    @renderProducts()
+    @renderCategories()
+    @renderShoppingCart()
+
 
   bind: ->
     Product.bind 'refresh update create', @renderProducts
