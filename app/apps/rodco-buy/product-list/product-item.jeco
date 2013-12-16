@@ -1,7 +1,7 @@
 <article class="product-item col-md-12" data-product="<%= @Name %>" data-price="<%= @PrecioMinimo__c %>" data-inventory="<%= @InventarioActual__c %>">
 
   <div class="col-md-12">
-    <a href="" class="btn btn-default btn-block">
+    <a href="" class="btn btn-default btn-block btn-lg">
       <h4 class="col-md-12 text-left"><%= @Name %></h4>
       <h4 class="col-md-12"> 
         <span class="pull-left">Precio: &cent;<%= @formattedPrice() %></span>

@@ -11,7 +11,7 @@
 
 @gray-darkest:           #333; //95
 @gray-darker:            #4d4d4d; //85
-@gray-dark:              #636466; //75
+@gray-dark:              #4d4d4d; //75
 @gray-semi-dark:         #77787b; //65
 @gray:                   #8a8c8e; //55 
 @gray-light:             #cccccc;  //25
@@ -26,9 +26,9 @@
 
 @brand-primary:         #1cb5ea;
 @brand-success:         #97ce41;
-@brand-warning:         #efdf30;
+@brand-warning:         #f0ad4e;
 @brand-danger:          #ee5437;
-@brand-info:            #99569b;
+@brand-info:            #edb61b;
 
 // Scaffolding
 // -------------------------
@@ -45,7 +45,7 @@
 // Typography
 // -------------------------
 
-@font-family-sans-serif:  'Open Sans', Arial, sans-serif;
+@font-family-sans-serif:  /*"Helvetica Neue"*/'Open Sans'/*, Helvetica, Arial,*/, sans-serif;
 @font-family-serif:       'Roboto', "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
@@ -53,17 +53,17 @@
 @font-size-large4:       24px;
 @font-size-largest:       20px;
 @font-size-large:         18px;
-@font-size-medium:        16px;
-@font-size-base:          12px;
-@font-size-small:         11px;
+@font-size-base:          14px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 @font-size-smallest:      10px;
 
-@font-size-h1:            20px;//floor(@font-size-base * 2.60); // ~36px
-@font-size-h2:            18px;//floor(@font-size-base * 2.15); // ~30px
-@font-size-h3:            16px;//ceil(@font-size-base * 1.70); // ~24px
-@font-size-h4:            12px;//ceil(@font-size-base * 1.25); // ~18px
-@font-size-h5:            11px;//@font-size-base;
-@font-size-h6:            10px;//ceil(@font-size-base * 0.85); // ~12px
+@font-size-h1:            floor(@font-size-base * 2.6); // ~36px
+@font-size-h2:            floor(@font-size-base * 2.15); // ~30px
+@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
+@font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
+@font-size-h5:            @font-size-base;
+@font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
 
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
@@ -74,10 +74,10 @@
 @line-height-smaller-block: 8px;
 @line-height-smallest-block: 8px;
 
-@headings-font-family:    @font-family-serif;
-@headings-font-weight:    100;
+@headings-font-family:    @font-family-base;
+@headings-font-weight:    /*500*/400;
 @headings-line-height:    1.1;
-@headings-color:          @gray-darker;
+@headings-color:          inherit;
 
 
 // Iconography
@@ -103,15 +103,17 @@
 @line-height-large:              1.33;
 @line-height-small:              1.5;
 
-@border-radius-base:             4px;
-@border-radius-large:            6px;
-@border-radius-small:            3px;
+//OVERRIDE
+@border-radius-base:             0px;
+@border-radius-large:            0px;
+@border-radius-small:            0px;
 
 @component-active-color:         #fff;
 @component-active-bg:            @brand-primary;
 
 @caret-width-base:               4px;
 @caret-width-large:              5px;
+
 
 // Tables
 // -------------------------
@@ -159,6 +161,7 @@
 @btn-link-disabled-color:        @gray-light;
 
 
+
 // Forms
 // -------------------------
 
@@ -203,6 +206,7 @@
 @dropdown-header-color:          @gray-light;
 
 @dropdown-caret-color:           #000;
+
 
 
 // COMPONENT VARIABLES
@@ -271,7 +275,7 @@
 
 // Basics of a navbar
 @navbar-height:                    50px;
-@navbar-margin-bottom:             @line-height-computed;
+@navbar-margin-bottom:             /*@line-height-computed*/0;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
@@ -517,17 +521,17 @@
 
 // Panels
 // -------------------------
-@panel-bg:                    @gray-light4;
-@panel-inner-border:          @gray-lighter;
-@panel-border-radius:         0px;
+@panel-bg:                    #fff;
+@panel-inner-border:          #ddd;
+@panel-border-radius:         @border-radius-base;
 @panel-footer-bg:             #f5f5f5;
 
 @panel-default-text:          @gray-dark;
-@panel-default-border:        @gray-lighter;
-@panel-default-heading-bg:    none;
+@panel-default-border:        #ddd;
+@panel-default-heading-bg:    #f5f5f5;
 
 @panel-primary-text:          #fff;
-@panel-primary-border:        @gray-lighter;
+@panel-primary-border:        @brand-primary;
 @panel-primary-heading-bg:    @brand-primary;
 
 @panel-success-text:          #fff;
