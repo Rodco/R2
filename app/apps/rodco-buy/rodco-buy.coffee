@@ -100,6 +100,7 @@ class RodcoBuy extends RSpine.Controller
     e.preventDefault()
     name = $(e.currentTarget).data 'product'
     price = $(e.currentTarget).data 'price'
+    inventory = $(e.currentTarget).data 'inventory'
     exists = false
 
     for p in @shoppingCart
@@ -108,7 +109,8 @@ class RodcoBuy extends RSpine.Controller
         exists = true
         break
 
-    @shoppingCart.push Name: name, price: price, count: 1 if not exists
+    if inventory > 0
+      @shoppingCart.push Name: name, price: price, count: 1 if not exists
     @calculateTotal()
     @renderShoppingCart()
 
