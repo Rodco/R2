@@ -4,7 +4,7 @@
     <a href="" class="btn btn-default btn-block">
       <h4 class="col-md-12 text-left"><%= @Name %></h4>
       <h4 class="col-md-12"> 
-        <span class="pull-left">Precio: <%= @PrecioMinimo__c %></span>
+        <span class="pull-left">Precio: &cent;<%= @formattedPrice() %></span>
         <span class="text-primary">Disponibles: <%= @InventarioActual__c %></span>
         <span class="pull-right">Descuento: <%= @DescuentoMaximo__c %>%</span>
       </h4>

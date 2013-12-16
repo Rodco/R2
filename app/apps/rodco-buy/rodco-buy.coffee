@@ -57,6 +57,7 @@ class RodcoBuy extends RSpine.Controller
     @renderProducts()
     @renderCategories()
     @renderShoppingCart()
+    @calculateTotal()
 
 
   bind: ->
