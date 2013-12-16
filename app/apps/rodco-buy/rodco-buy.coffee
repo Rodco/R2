@@ -187,6 +187,11 @@ class RodcoBuy extends RSpine.Controller
     @subCategoryDropdown.html category
     @subCategory = true
 
+    setTimeout (->
+      console.log 'should open'
+      $(".subcategories-ddwn .dropdown-toggle").dropdown "toggle"
+    ), 100
+
   # Change the actual subcategory.
   changeSubCategory: (e) =>
     subcategory = $(e.target).parent().data 'category'
@@ -194,6 +199,10 @@ class RodcoBuy extends RSpine.Controller
     if not subcategory
       @productsFilter = {}
       @renderCategories()
+      setTimeout (->
+        console.log 'should open'
+        $(".categories-ddwn .dropdown-toggle").dropdown "toggle"
+      ), 100
     else
       @subCategoryDropdown.html $(e.target).html()
       @productsFilter = 'Categoria__c': @activeCategory, 'Grupo__c': subcategory
