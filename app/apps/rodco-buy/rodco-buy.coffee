@@ -78,8 +78,12 @@ class RodcoBuy extends RSpine.Controller
 
   # Search a product.
   searchProduct: (e) =>
-    @productsFilter.name = $(e.target).val()
-    @renderProducts()
+    e.preventDefault()
+    search = $(e.target).val()
+
+    if search.length % 3 is 0
+      @productsFilter.name = search
+      @renderProducts()
 
 
   # Render shopping cart.

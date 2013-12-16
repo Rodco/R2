@@ -26,33 +26,31 @@
         <h2>SELECCIONE LOS <span class="text-primary">PRODUCTOS</span> QUE DESEA.</h2>
       </div>
       <div class="row page-header">
-        <form class="form-inline col-md-12" role="search">
-          <div class="form-group col-md-4 col-md-offset-2">
-            <label class="col-md-3">Buscar</label>
-            <div class="col-md-9">
-                <input type="text" class="form-control input-lg product-search" name="" placeholder="Nombre">
-              </div>
+        <div class="form-group col-md-4 col-md-offset-2">
+          <label class="col-md-3">Buscar</label>
+          <div class="col-md-9">
+              <input type="text" class="form-control input-lg product-search" name="" placeholder="Nombre">
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+          <label class="col-md-3">Dpto</label>
+
+          <div class="btn-group col-md-9 categories-ddwn open">
+            <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
+              <span class="category-dropdown-label">TODOS</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu categorias-list" role="menu">                
+            </ul>
           </div>
-          <div class="form-group col-md-4">
-            <label class="col-md-3">Dpto</label>
 
-            <div class="btn-group col-md-9 categories-ddwn open">
-              <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
-                <span class="category-dropdown-label">TODOS</span> <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu categorias-list" role="menu">                
-              </ul>
-            </div>
-
-            <div class="btn-group col-md-9 subcategories-ddwn" style="display: none">
-              <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
-                <span class="subcategory-dropdown-label">TEST :D</span> <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu subcategories-list" role="menu">                
-              </ul>
-            </div>
-          </div>        
-        </form>
+          <div class="btn-group col-md-9 subcategories-ddwn" style="display: none">
+            <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
+              <span class="subcategory-dropdown-label">TEST :D</span> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu subcategories-list" role="menu">                
+            </ul>
+          </div>
+        </div>        
       </div>
     </header>
   </div>  
