@@ -1,6 +1,6 @@
-<div class="row" data-product="<%= @Name %>">
+<div class="row" data-product="<%= @id %>">
   <div class="col-md-3">
-    <input type="text" class="col-md-3 form-control input-lg text-center product-count" value="<%= @count %>">
+    <input type="text" class="col-md-3 form-control input-lg text-center product-count" value="<%= @Amount %>">
   </div>
   <a href="" class="btn btn-default col-md-9">
     <h3 class="col-md-2 remove-cart-item"><span class="glyphicon glyphicon-remove-circle text-danger">X</span></h3>

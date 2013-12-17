@@ -35,7 +35,7 @@
         <div class="form-group col-md-4">
           <label class="col-md-3">Dpto</label>
 
-          <div class="btn-group col-md-9 categories-ddwn open">
+          <div class="btn-group col-md-9 categories-ddwn">
             <button type="button" class="btn btn-default btn-lg btn-block dropdown-toggle" data-toggle="dropdown">
               <span class="category-dropdown-label">TODOS</span> <span class="caret"></span>
             </button>
@@ -66,13 +66,13 @@
     <!-- Header. -->
     <h3 class="text-primary">Productos Agregados<span class="pull-right cart-count">0</span><span class="glyphicon glyphicon-shopping-cart pull-right"></span></h3>
 
-    <div class="row">
+    <div class="row shopping-cart-meta" style="display: none">
       <label for="" class="col-md-12">TOTAL</label>
       <h4 class="col-md-7">&cent;<span class="cart-total-container">0.00</span></h4>
       <a href="#" class="btn btn-success btn-lg col-md-5 confirm-cart">Confirmar <span class="glyphicon glyphicon-ok"></span></a>
     </div>
 
-    <div class="row">
+    <div class="row shopping-cart-meta" style="display: none">
       <label for="" class="col-md-3">Cant.</label>
       <label for="" class="col-md-9">Productos</label>
     </div>
