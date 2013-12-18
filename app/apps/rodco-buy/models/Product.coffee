@@ -11,13 +11,17 @@ class producto extends RSpine.Model
     super 
 
 
+  # Model methods:
+  # --------------
+  # Format price.
+  formattedPrice: -> @PrecioMinimo__c.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+
+
+  # Collection methods:
+  # -------------------
   # Filters.
   @filters:
     '' : 'Activo__c = true'
-
-
-  # Format price.
-  formattedPrice: -> @PrecioMinimo__c.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
 
 
   # Filter products by category and/or search name.
