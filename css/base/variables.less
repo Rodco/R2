@@ -33,7 +33,7 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@body-bg:               /*#fff*/;
 @text-color:            @gray-dark;
 
 // Links
@@ -395,20 +395,20 @@
 // Form states and alerts
 // -------------------------
 
-@state-success-text:             #468847;
-@state-success-bg:               #dff0d8;
+@state-success-text:             @brand-success;//#468847;
+@state-success-bg:               @brand-success;//#dff0d8;
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #3a87ad;
-@state-info-bg:                  #d9edf7;
+@state-info-text:                @brand-info;//#3a87ad;
+@state-info-bg:                  @brand-info;//#d9edf7;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
-@state-warning-text:             #c09853;
-@state-warning-bg:               #fcf8e3;
+@state-warning-text:             @brand-warning;//#c09853;
+@state-warning-bg:               @brand-warning;//#fcf8e3;
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 5%);
 
-@state-danger-text:              #b94a48;
-@state-danger-bg:                #f2dede;
+@state-danger-text:              @brand-danger;//#b94a48;
+@state-danger-bg:                @brand-danger;//#f2dede;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 
@@ -425,7 +425,7 @@
 // Popovers
 // -------------------------
 @popover-bg:                          #fff;
-@popover-max-width:                   276px;
+@popover-max-width:                   600px;//276px;
 @popover-border-color:                rgba(0,0,0,.2);
 @popover-fallback-border-color:       #ccc;
 
