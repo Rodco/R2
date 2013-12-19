@@ -8,8 +8,8 @@ RSpine = require 'rspine'
 # Create a Order Page controller.
 
 # Models.
-Product = require 'app/rodco-buy/models/Product'
-Cart    = require 'app/rodco-buy/models/Order'
+Product = require 'models/Product'
+Cart    = require 'models/Order'
 
 
 class RodcoBuy extends RSpine.Controller
