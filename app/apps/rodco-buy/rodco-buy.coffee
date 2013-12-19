@@ -17,7 +17,6 @@ class RodcoBuy extends RSpine.Controller
   
   elements:
     '.product-list'            : 'productList'
-    '.order-list'              : 'orderList'
 
     '.category-dropdown-label'    : 'categoryDropdown'
     '.categories-ddwn'            : 'categoriesContainer'
@@ -32,16 +31,21 @@ class RodcoBuy extends RSpine.Controller
     '.cart-count'              : 'shoppingCartCount'
     '.cart-total-container'    : 'shoppingCartTotal'
 
+    '.order-list'                 : 'orderList'
+    '.delivery-service-container' : 'deliveryServiceContainer'
+
   events:
     'click .product-item'     : 'addProduct'
     'click .remove-cart-item' : 'removeProduct'
     'keyup .product-search'   : 'searchProduct'
     'click .confirm-cart'     : 'renderOrder'
-    'click .back-to-cart'     : 'render'
     'change .product-count'   : 'updateProductCart'
 
     'click .categorias-list .category-item'    : 'changeCategory'
     'click .subcategories-list .category-item' : 'changeSubCategory'
+
+    'click .switch-delivery-method' : 'switchDeliveryMethod'
+    'click .back-to-cart'     : 'render'
 
   constructor: ->
     super
@@ -169,6 +173,16 @@ class RodcoBuy extends RSpine.Controller
     e.preventDefault()
     cartProduct = Cart.find $(e.currentTarget).parent().parent().data 'product'
     cartProduct.destroy()
+
+
+  # Order page methods.
+  # -------------------
+  # Change delivery method.
+  switchDeliveryMethod: (e) =>
+    display = if ($(e.currentTarget).data 'type') is 'encomienda' then 'block' else 'none'
+    $(e.currentTarget).siblings('.active').removeClass 'active'
+    $(e.currentTarget).addClass 'active'
+    @deliveryServiceContainer.css display: display
     
 
 module.exports = RodcoBuy
