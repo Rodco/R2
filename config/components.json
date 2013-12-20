@@ -4,13 +4,13 @@
         "name":"initApp",
         "device":"desktop",
         "type": "lib,app,component",
-        "appPaths": ["./app/initApp", "./app/apps/webHome", "./app/components/menu", "./app/components/appMenu", "./app/libraries/bootstrapFramework"]
+        "appPaths": ["./app/initApp", "./app/apps/webHome", "./app/components/menu", "./app/components/appMenu", "./app/libraries/bootstrapFramework", "./app/models"]
       },
       {
         "name":"initApp",
         "device":"mobile",
         "type": "lib,app,component",
-        "appPaths": ["./app/initApp","./app/apps/mobileHome","./app/components/appMenu", "./app/libraries/bootstrapFramework" ]
+        "appPaths": ["./app/initApp","./app/apps/mobileHome","./app/components/appMenu", "./app/libraries/bootstrapFramework", "./app/models" ]
       },
       {
         "name":"launchStage",
