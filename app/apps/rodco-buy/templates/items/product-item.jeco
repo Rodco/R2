@@ -3,10 +3,11 @@
   <div class="col-md-12">
     <a href="" class="btn btn-default btn-block btn-lg">
       <h4 class="col-md-12 text-left"><%= @Name %></h4>
-      <h4 class="col-md-12"> 
-        <span class="pull-left">Precio: &cent;<%= @formattedPrice() %></span>
-        <span class="text-primary">Disponibles: <%= @InventarioActual__c %></span>
-        <span class="pull-right">Descuento: <%= @DescuentoMaximo__c %>%</span>
+      <h4 class="col-md-12 text-left"> 
+        <span class="">Precio: &cent;<%= @formattedPrice() %>&nbsp;</span>
+        <span class="">Descuento: <%= @DescuentoMaximo__c %>%</span>
+        <span class="pull-right text-primary">Disponibles: <%= @InventarioActual__c %></span>
+        
       </h4>
     </a>
     <div class="progress">
