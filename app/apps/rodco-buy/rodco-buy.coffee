@@ -98,6 +98,14 @@ class RodcoBuy extends RSpine.Controller
       @renderProducts()
 
 
+  # Update product list, decreasing the amount of
+  # available items.
+  # decreaseProductInventory: (productId, amount) ->
+  #   product = Product.find productId
+  #   product.InventarioActual__c = product.InventarioActual__c - amount
+  #   product.save()
+
+
   # Category methods.
   # -----------------
   # Render categories list.

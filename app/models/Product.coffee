@@ -15,6 +15,7 @@ class producto extends RSpine.Model
   # --------------
   # Format price.
   formattedPrice: -> @PrecioMinimo__c.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+  className: -> if @InventarioActual__c > 0 then 'primary' else 'danger'
 
 
   # Collection methods:
