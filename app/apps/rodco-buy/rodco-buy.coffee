@@ -86,11 +86,15 @@ class RodcoBuy extends RSpine.Controller
 
   # Search a product by the input.
   searchProduct: (e) =>
+
+    # Clear categories filter.
+    @renderCategories()
+
     e.preventDefault()
     search = $(e.target).val()
 
     if search.length % 3 is 0
-      @productsFilter.name = search.trim()
+      @productsFilter = name: search.trim()
       @renderProducts()
 
 
