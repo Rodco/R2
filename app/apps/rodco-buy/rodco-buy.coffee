@@ -168,8 +168,9 @@ class RodcoBuy extends RSpine.Controller
   addProduct: (e) =>
     e.preventDefault()
     product     = Product.find $(e.currentTarget).data 'product'
-    cartProduct = Cart.addProduct product
-    @shoppingCart.find('[data-product="' + cartProduct.id + '"] .product-count').select()
+    if product.InventarioActual__c > 0
+      cartProduct = Cart.addProduct product
+      @shoppingCart.find('[data-product="' + cartProduct.id + '"] .product-count').select()
 
   # Update the amount of a product cart.
   updateProductCart: (e) =>
