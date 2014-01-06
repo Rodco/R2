@@ -1,147 +1,149 @@
-<div class="row">
-	<h2 class="text-center">RODCO Mayorista</h2>
-</div>
-
-<div class="row">
-	<form class="form-inline" action="">
-		<div class="input-group col-xs-12">
-			<span class="input-group-btn">
-				<label>
-					Tel
-				</label>
-			</span>
-			<input type="text" class="form-control input-lg" name="" placeholder="0000-00-00">
-		</div>
-	</form><!-- login form -->
-</div><!-- row -->
-
-<div class="row page-header">
-	<nav class=""><!-- nav navbar-default navbar-fixed-top -->
-		<form class="form-inline" role="form">
-			<div class="input-group col-xs-12 ">
-				<input type="text" class="form-control input-lg" name="" placeholder="Buscar productos">
-				<span class="input-group-btn">
-					<button class="btn btn-default btn-lg pull-left" data-toggle="modal" data-target="#category-menu">
-						<span class="glyphicon glyphicon-th-list"></span>
-					</button>
-				</span>
-				<span class="input-group-btn">
-					<button class="btn btn-default btn-lg pull-left" data-toggle="modal" data-target="#selected-products-modal">
-						<span class="glyphicon glyphicon-shopping-cart text-success"></span>
-					</button><!-- Button Trigger Modal -->
-				</span>
-			</div><!-- Input group -->
-		</form><!-- Search form -->
-	</nav><!-- Navbar to be fixed top -->
-</div><!-- Row -->
-
-<!-- Category Menu Modal -->
-<div class="modal fade" id="category-menu" tabindex="-1" role="dialog" aria-labelledby="category-menu" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-			<div class="modal-header ">
-				<button type="button" class="btn btn-lg close" data-dismiss="modal" aria-hidden="true">
-					<span class="glyphicon glyphicon-remove-circle"></span>
-				</button>
-				<h3 class="modal-title">Buscar por Categoría</h3>
-			</div>
-			<div class="list-group">
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Metales</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Candados</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Remate</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Cerraduras</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Ferretería</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Eléctrico</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Coflex</a>
-				<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Plywood</a>
-			</div>
-    </div><!-- Modal Content -->
-  </div><!-- Modal Dialog -->
-</div><!-- Modal Container -->
-        
-<!-- Selected Products Modal -->
-<div class="modal fade" id="selected-products-modal" tabindex="-1" role="dialog" aria-labelledby="selected-products-modal" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-
-			<div class="modal-header">
-			  <button type="button" class="btn btn-lg close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove-circle"></span></button>
-				<h2 class="text-center text-success"><span class="glyphicon glyphicon-shopping-cart"></span><span>12</span></h2>
-				<h3 class="modal-title text-center">Productos Agregados</h3>
-			</div><!-- Modal Header  -->
-
-			<div class="modal-body">
-				<div class="row">
-					<article class="product col-xs-12 ">
-						<a href="" class="btn btn-default btn-block">
-							<h4 class="col-xs-12 text-left">CABLE CONDUSAL THHN UL #6 BLANCO 100m</h4>
-							<h4 class="col-xs-12 text-left"> 
-								<small class="">Precio: &#8353;860.00</small>&nbsp;
-								<small class="text-primary">Disponibles:1,100</small>
-							</h4>
-						</a>
-						<div class="progress">
-						  <div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%"><span class="sr-only">67% Complete</span>
-							</div>
-						</div>
-						<form class="form-inline" role="form">
-							<div class="input-group">
-								<span class="input-group-btn">
-									<button class="btn btn-default btn-lg pull-left disabled">
-									<span class="text-success">Agregar</span>
-									</button>
-								</span>
-								<input type="tel" class="form-control input-lg text-success" name="" placeholder="" value="5300">
-							</div><!-- Input group -->
-						</form><!-- Product Ammount form -->
-					</article><!-- Un Producto -->
-				</div>
-			</div><!-- Modal-Body -->
-
-			<div class="modal-footer">
-				<a href="su-orden-smartphone.html" type="button" class="btn btn-success btn-lg btn-block">Confirmar C230,800.00 <span class="glyphicon glyphicon-ok"></span></a>
-			</div><!-- Modal Footer -->
-
-		</div><!-- /.modal-content -->
-	</div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-        
-<div class="row">
-	<article class="product col-xs-12 ">
-		<a href="" class="btn btn-default btn-block">
-			<h4 class="col-xs-12 text-left">CABLE CONDUSAL THHN UL #12 VERDE 100m</h4>
-			<h4 class="col-xs-12 text-left"> 
-				<small class="">Precio: &#8353;205.00</small>&nbsp;
-				<small class="text-primary">Disponibles:600</small>
-			</h4>
-		</a>
-		<div class="progress">
-			<div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%"><span class="sr-only">67% Complete</span>
-			</div>
-		</div>
-	</article><!-- Un Producto -->
-</div>
-       
-<div class="row">
-	<article class="product col-xs-12  has-error">
-		<a href="" class="btn btn-default btn-block disabled control-label">
-			<h4 class="col-xs-12 text-left">REPUESTO PARA CUTTER ASSIST 105 10 UND.</h4>
-			<h4 class="col-xs-12 text-left"> 
-				<small class="">Precio: &#8353;304.00</small>&nbsp;
-				<small class="text-danger">Disponibles:0</small>
-			</h4>
-		</a>
-		<div class="progress">
-			<div class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><span class="sr-only">1% Complete</span>
-			</div>
-		</div>
-	</article><!-- Un Producto -->
-</div>
-<br><br><br>
-<div class="row">
-	<div class="col-xs-12">
-		<nav class="navbar navbar-fixed-bottom" role="navigation">
-			<a href="su-orden-smartphone.html" class="btn btn-success btn-lg btn-block">Confirmar Total: C450,988.00 <span class="glyphicon glyphicon-ok"></span></a>
-		</nav><!-- products navbar-->
+<div class="container">
+	<div class="row">
+		<h2 class="text-center">RODCO Mayorista</h2>
 	</div>
-</div><!-- row -->
+	
+	<div class="row">
+		<form class="form-inline" action="">
+			<div class="input-group col-xs-12">
+				<span class="input-group-btn">
+					<label>
+						Tel
+					</label>
+				</span>
+				<input type="text" class="form-control input-lg" name="" placeholder="0000-00-00">
+			</div>
+		</form><!-- login form -->
+	</div><!-- row -->
+	<br>
+	<div class="row page-header">
+		<nav class=""><!-- nav navbar-default navbar-fixed-top -->
+			<form class="form-inline" role="form">
+				<div class="input-group col-xs-12 ">
+					<input type="text" class="form-control input-lg" name="" placeholder="Buscar productos">
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-lg pull-left" data-toggle="modal" data-target="#category-menu">
+							<span class="glyphicon glyphicon-th-list"></span>
+						</button>
+					</span>
+					<span class="input-group-btn">
+						<button class="btn btn-default btn-lg pull-left" data-toggle="modal" data-target="#selected-products-modal">
+							<span class="glyphicon glyphicon-shopping-cart text-success"></span>
+						</button><!-- Button Trigger Modal -->
+					</span>
+				</div><!-- Input group -->
+			</form><!-- Search form -->
+		</nav><!-- Navbar to be fixed top -->
+	</div><!-- Row -->
+	
+	<!-- Category Menu Modal -->
+	<div class="modal fade" id="category-menu" tabindex="-1" role="dialog" aria-labelledby="category-menu" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+				<div class="modal-header ">
+					<button type="button" class="btn btn-lg close" data-dismiss="modal" aria-hidden="true">
+						<span class="glyphicon glyphicon-remove-circle"></span>
+					</button>
+					<h3 class="modal-title">Buscar por Categoría</h3>
+				</div>
+				<div class="list-group">
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Metales</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Candados</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Remate</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Cerraduras</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Ferretería</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Eléctrico</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Coflex</a>
+					<a href="#" class="list-group-item btn-lg">&nbsp;&nbsp;Plywood</a>
+				</div>
+	    </div><!-- Modal Content -->
+	  </div><!-- Modal Dialog -->
+	</div><!-- Modal Container -->
+	        
+	<!-- Selected Products Modal -->
+	<div class="modal fade" id="selected-products-modal" tabindex="-1" role="dialog" aria-labelledby="selected-products-modal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+	
+				<div class="modal-header">
+				  <button type="button" class="btn btn-lg close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove-circle"></span></button>
+					<h2 class="text-center text-success"><span class="glyphicon glyphicon-shopping-cart"></span><span>12</span></h2>
+					<h3 class="modal-title text-center">Productos Agregados</h3>
+				</div><!-- Modal Header  -->
+	
+				<div class="modal-body">
+					<div class="row">
+						<article class="product col-xs-12 ">
+							<a href="" class="btn btn-default btn-block">
+								<h4 class="col-xs-12 text-left">CABLE CONDUSAL THHN UL #6 BLANCO 100m</h4>
+								<h4 class="col-xs-12 text-left"> 
+									<small class="">Precio: &#8353;860.00</small>&nbsp;
+									<small class="text-primary">Disponibles:1,100</small>
+								</h4>
+							</a>
+							<div class="progress">
+							  <div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%"><span class="sr-only">67% Complete</span>
+								</div>
+							</div>
+							<form class="form-inline" role="form">
+								<div class="input-group">
+									<span class="input-group-btn">
+										<button class="btn btn-default btn-lg pull-left disabled">
+										<span class="text-success">Agregar</span>
+										</button>
+									</span>
+									<input type="tel" class="form-control input-lg text-success" name="" placeholder="" value="5300">
+								</div><!-- Input group -->
+							</form><!-- Product Ammount form -->
+						</article><!-- Un Producto -->
+					</div>
+				</div><!-- Modal-Body -->
+	
+				<div class="modal-footer">
+					<a href="su-orden-smartphone.html" type="button" class="btn btn-success btn-lg btn-block">Confirmar C230,800.00 <span class="glyphicon glyphicon-ok"></span></a>
+				</div><!-- Modal Footer -->
+	
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	        
+	<div class="row">
+		<article class="product col-xs-12 ">
+			<a href="" class="btn btn-default btn-block">
+				<h4 class="col-xs-12 text-left">CABLE CONDUSAL THHN UL #12 VERDE 100m</h4>
+				<h4 class="col-xs-12 text-left"> 
+					<small class="">Precio: &#8353;205.00</small>&nbsp;
+					<small class="text-primary">Disponibles:600</small>
+				</h4>
+			</a>
+			<div class="progress">
+				<div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 67%"><span class="sr-only">67% Complete</span>
+				</div>
+			</div>
+		</article><!-- Un Producto -->
+	</div>
+	       
+	<div class="row">
+		<article class="product col-xs-12  has-error">
+			<a href="" class="btn btn-default btn-block disabled control-label">
+				<h4 class="col-xs-12 text-left">REPUESTO PARA CUTTER ASSIST 105 10 UND.</h4>
+				<h4 class="col-xs-12 text-left"> 
+					<small class="">Precio: &#8353;304.00</small>&nbsp;
+					<small class="text-danger">Disponibles:0</small>
+				</h4>
+			</a>
+			<div class="progress">
+				<div class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="width: 1%"><span class="sr-only">1% Complete</span>
+				</div>
+			</div>
+		</article><!-- Un Producto -->
+	</div>
+	<br><br><br>
+	<div class="row">
+		<div class="col-xs-12">
+			<nav class="navbar navbar-fixed-bottom" role="navigation">
+				<a href="su-orden-smartphone.html" class="btn btn-success btn-lg btn-block">Confirmar Total: C450,988.00 <span class="glyphicon glyphicon-ok"></span></a>
+			</nav><!-- products navbar-->
+		</div>
+	</div><!-- row -->
+</div>
