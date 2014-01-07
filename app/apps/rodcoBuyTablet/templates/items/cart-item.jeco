@@ -1,0 +1,11 @@
+<div class="row" data-product="<%= @id %>">
+	<form role="form" class="col-sm-4">
+		<div class="form-group">
+			<input type="number" class="form-control input-lg text-center" value="<%= @Amount %>">
+		</div>
+	</form>
+	<a href="" class="btn btn-default col-sm-8">
+		<h3 class="col-sm-2 remove-cart-item"><span class="glyphicon glyphicon-remove-circle text-danger">X</span></h3>
+		<h4 class="col-sm-10 text-left"><%= @Name %></h4>
+	</a>
+</div><!-- Un Producto Agregado -->

@@ -1,0 +1,19 @@
+<article class="product-item col-md-12" data-product="<%= @Id %>">
+
+  <div class="col-md-12">
+    <a href="" class="btn btn-default btn-block btn-lg">
+      <h4 class="col-md-12 text-left"><%= @Name %></h4>
+      <h4 class="col-md-12"> 
+        <span class="pull-left">Precio: &cent;<%= @formattedPrice() %></span>
+        <span class="text-primary">Disponibles: <%= @InventarioActual__c %></span>
+        <span class="pull-right">Descuento: <%= @DescuentoMaximo__c %>%</span>
+      </h4>
+    </a>
+    <div class="progress">
+      <div class="progress-bar progress-bar-primary"  role="progressbar" aria-valuenow="10 " aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+        <span class="sr-only">10% Complete</span>
+      </div>
+    </div>
+  </div>
+</article>
+<br />
